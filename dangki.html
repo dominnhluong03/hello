@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+        <script>
+            var x = 10;
+            var s = "xin chao";
+            //ES6, ES7
+            let a = 10;
+            function tinhtong(){
+                return x + a;
+            }
+            //alert("Tong cua 2 so x va a la: " + tinhtong());
+            console.log(tinhtong());
+            function get_hoten(){
+                var hoten = document.getElementById("txt_hoten").value;
+                alert("xin chao thanh vien " + hoten);
+            }
+            function get_vb(){
+                var hoten = document.getElementById("txt_hoten").value;
+                document.getElementById("vb").innerHTML = hoten;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1 style="text-align: center;;">Trang Dang Ky tai Khoan</h1>
+                <div class="col-6">
+                    <form action="dangki.html" method="post">
+                        Nhap ho ten:
+                    <input onkeydown="get_vb();" autofocus class="form-control" type="text" name="txt_hoten" id="txt_hoten" required>
+                    <p id="vb"></p>
+                    Nhap vao ten dang nhap:
+                    <input class="form-control" type="text" name="txt_us" id="txt_us">
+                    Nhap mo ta ve ban than:
+                    <!-- <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea> -->
+                    <div id="editor">This is some sample content.</div>
+                    <script>
+                            ClassicEditor
+                                    .create( document.querySelector( '#editor' ) )
+                                    .then( editor => {
+                                            console.log( editor );
+                                    } )
+                                    .catch( error => {
+                                            console.error( error );
+                                    } );
+                    </script>
+                    Nhap vao mat khau:
+                    <input class="form-control" type="password" name="" id="">
+                    Nhap vao ngay thang nam sinh:
+                    <input class="form-control" type="date" name="" id="">
+                    Chon anh dai dien:
+                    <input class="form-control" type="file" name="" id="">
+                    Gioi tinh:
+                    <br> 
+                    <hr>
+                    Nam <input type="radio" name="gioitinh" id="">
+                    Nu <input type="radio" name="gioitinh" id="">
+                    <br>
+                    <hr>
+                    <input onclick="get_hoten();" class="btn btn-primary" type="submit" value="Register">
+                    <input class="btn btn-warning" type="reset" value="Reset">
+                    <a class="btn btn-danger" href="#">Cancel</a>
+                    <a href="#">Ban da tao tai khoan?</a>
+                </div>
+                    </form>
+            </div>
+        </div>
+    </body>
+</html>

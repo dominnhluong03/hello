@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần Comment Shopee</title>
+    <style>
+        /* CSS cho phần comment */
+        .comment-section {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .comment {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .comment-author {
+            font-weight: bold;
+        }
+
+        .comment-text {
+            margin-top: 5px;
+        }
+
+        /* CSS cho nút đăng comment */
+        .comment-form {
+            margin-top: 20px;
+        }
+
+        .comment-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .comment-submit {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="comment-section">
+        <!-- Hiển thị các comment -->
+        <div class="comment">
+            <div class="comment-author">Người dùng 1</div>
+            <div class="comment-text">Bình luận của người dùng 1.</div>
+        </div>
+        <div class="comment">
+            <div class="comment-author">Người dùng 2</div>
+            <div class="comment-text">Bình luận của người dùng 2.</div>
+        </div>
+        
+        <!-- Form để đăng comment mới -->
+        <div class="comment-form">
+            <input type="text" class="comment-input" placeholder="Nhập bình luận của bạn...">
+            <button class="comment-submit">Đăng</button>
+        </div>
+    </div>
+</body>
+</html>

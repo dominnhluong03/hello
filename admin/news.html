@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+        <link rel="stylesheet" href="../bootstrap.min.css">
+    </head>
+    <body style="background-color: brown;">
+        <div class="container">
+            <h1 style="text-align: center;">Trang quan tri danh muc</h1>
+            <div class="row">
+                <div class="col-6">
+                    <form action="cate.html" method="post">
+                        Chon danh muc:
+                        <select class="form-control" name="cate_id" id="">
+                            <option value="1">Tin tuc</option>
+                            <option value="2">Thong bao</option>
+                        </select>
+                        Nhap vao tieu de tin:
+                        <input class="form-control" type="text" name="txt_title" id="">
+                        Nhap Noi dung tin:
+                        <div id="editor">This is some sample content.</div>
+                        <script>
+                                ClassicEditor
+                                        .create( document.querySelector( '#editor' ) )
+                                        .then( editor => {
+                                                console.log( editor );
+                                        } )
+                                        .catch( error => {
+                                                console.error( error );
+                                        } );
+                        </script>
+                        Chon anh dai dien:
+                        <input class="form-control" type="file" name="img" id="">
+                        Nguoi dang:
+                        <input class="form-control" type="text" name="text" name="author" id="">
+                        Ngay dang:
+                        <input class="form-control" type="date" name="text" name="date" id="">
+                        Nhap vao trang thai:
+                        <input class="form-control" type="text" name="txt_status" id="">
+                        <br>
+                        <input class="btn btn-primary" type="submit" value="Them moi" name="insert" id="">
+                        <br>
+                        Tim kiem danh muc:
+                        <input class="form-control" type="text" name="txt_search" id="">
+                        <input class="btn btn-success" type="submit" value="Tim kiem" name="search">
+                    </form>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>danh muc</th>
+                            <th>Tieu de tin</th>
+                            <th>Noi dung tin</th>
+                            <th>Anh dai dien</th>
+                            <th>nguoi dung</th>
+                            <th>nguoi dang</th>
+                            <th>ngay dang</th>
+                            <th>Trang thai</th>
+                            <th>Thao tac</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Tin tuc</td>
+                            <td>ban tin so 1</td>
+                            <td>
+                                <img src="/anh/bird-icon.png" alt="">
+                            </td>
+                            <td>Noi dung ban tin so 1</td>
+                            <td>admin</td>
+                            <td>15/09/2023</td>
+                            <td>1</td>
+                            <td>
+                                <a class="btn btn-warning" href="#">Sua</a>
+                                <a class="btn btn-danger" href="#">Xoa</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

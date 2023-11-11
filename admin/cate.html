@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../bootstrap.min.css">
+    </head>
+    <body style="background-color: brown;">
+        <div class="container">
+            <h1 style="text-align: center;">Trang quan tri danh muc</h1>
+            <div class="row">
+                <div class="col-6">
+                    <form action="cate.html" method="post">
+                        Nhap vao danh muc:
+                        <input class="form-control" type="text" name="txt_cate_name" id="">
+                        Nhap vao trang thai:
+                        <input class="form-control" type="text" name="txt_status" id="">
+                        <br>
+                        <input class="btn btn-primary" type="submit" value="Them moi" name="insert" id="">
+                        <br>
+                        Tim kiem danh muc:
+                        <input class="form-control" type="text" name="txt_search" id="">
+                        <input class="btn btn-success" type="submit" value="Tim kiem" name="search">
+                    </form>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Ma danh muc</th>
+                            <th>Ten danh muc</th>
+                            <th>Trang thai</th>
+                            <th>Thao tac</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Tin tuc</td>
+                            <td>1</td>
+                            <td>
+                                <a class="btn btn-warning" href="#">Sua</a>
+                                <a class="btn btn-danger" href="#">Xoa</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

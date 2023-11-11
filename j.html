@@ -1,0 +1,43 @@
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .red_box{
+            background-color: red;
+        }
+        .green_box{
+            background-color: green;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#an").click(function(){
+                $("#img").hide(2000);
+            })
+            $("#hien").click(function(){
+                $("#img").show(2000);
+            })
+            $("#red").click(function(){
+                $("#box").removeClass("green_box");
+                $("#box").addClass("red_box");
+            })
+            $("#green").click(function(){
+                $("#box").removeClass("red_box")
+                $("#box").addClass("green_box");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img id="img" src="anh/b4.png" alt="">
+        <button class="btn btn-primary" id="hien">Hien thi anh</button>
+        <button class="btn btn-danger" id="an">An hinh anh</button>
+        <div style="width: 300px; height: 300px; border: 1px solid red;;" id="box">
+
+        </div>
+        <button id="red">Red</button>
+        <button id="green">Green</button>
+    </div>
+</body>
+</html>
